@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html>
+
+<head lang="uk">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lab 3</title>
+    <link rel="stylesheet" type="text/css" href="main.css" />
+</head>
+
+<body>
+    <div class="container">
+        <div class="white-box first-container">
+            <div class="text-input-container">
+                <div class="text-field">
+                    <input type="text" placeholder="Назва товару">
+                    <button class="add-button right tooltip" data-tooltip="Додати товар">Додати</button>
+                </div>
+            </div>
+            <div class="separator"></div>
+            <div class="row">
+                <div class="row-column left-container">
+                    <span class="crossed product">Помідори</span>
+                </div>
+                <div class="row-column center-container">
+                    <span class="circle-button minus notseen tooltip" data-tooltip="Мінус">
+                        <span class="button-text">-</span>
+                    </span>
+                    <span class="count">
+                        <span class="count-text">2</span>
+                    </span>
+                    <span class="circle-button plus notseen tooltip" data-tooltip="Плюс">
+                        <span class="button-text">+</span>
+                    </span>
+                </div>
+                <div class="row-column right-container">
+                    <div class="purchase-button right tooltip" data-tooltip="Не куплено">Не куплено</div>
+                    <span class="square-button X right minus tooltip notseen" data-tooltip="X">
+                    <span class="X button-text right">x</span>
+                </div>
+            </div>
+            <div class="separator"></div>
+            <div class="row">
+                <div class="row-column left-container">
+                    <span class="product">Печиво</span>
+                </div>
+                <div class="row-column center-container">
+                    <span class="circle-button minus tooltip" data-tooltip="Мінус">
+                        <span class="button-text">-</span> 
+                    </span>
+                    <span class="count">
+                        <span class="count-text">2</span>
+                    </span>
+                    <span class="circle-button plus tooltip" data-tooltip="Плюс">
+                        <span class="button-text">+</span>
+                    </span>
+                </div>
+                <div class="row-column right-container">
+                        <div class="purchase-button right tooltip" data-tooltip="Куплено">Куплено</div>
+                        <span class="square-button X right minus tooltip" data-tooltip="X">
+                        <span class="X button-text right">x</span>
+                    </span>
+                </div>
+            </div>
+            <div class="separator"></div>
+            <div class="row">
+                <div class="row-column left-container">
+                <span class="product">Сир</span>
+                </div>
+                <div class="row-column center-container">
+                    <span class="circle-button minus faded tooltip" data-tooltip="Мінус">
+                        <span class="button-text">-</span>
+                    </span>
+                    <span class="count">
+                        <span class="count-text">1</span>
+                    </span>
+                    <span class="circle-button plus tooltip" data-tooltip="Плюс">
+                        <span class="button-text">+</span>
+                    </span>
+                </div>
+                <div class="row-column right-container">
+                    <div class="purchase-button right tooltip" data-tooltip="Куплено">Куплено</div>
+                        <span class="square-button X right minus tooltip" data-tooltip="X">
+                        <span class="X button-text right">x</span>
+                        </span>
+                </div>
+            </div>
+            <div class="separator"></div>
+        </div>
+
+        <div class="white-box second-container">
+            <div class="first row-left">
+                <h2>Залишилося</h2>
+            </div>
+            <div class="separator"></div>
+            <div class="second row-left">
+                <div class="cart-product">
+                    <span class="cart-product-text">Печиво</span>
+                    <span class="cart-product-amount">2</span>
+                </div>
+                <div class="cart-product">
+                    <span class="cart-product-text">Сир</span>
+                    <span class="cart-product-amount">1</span>
+                </div>
+            </div>
+            <div class="separator"></div>
+            <div class="third row-left">
+                <h2>Куплено</h2>
+            </div>
+            <div class="separator"></div>
+            <div class="fourth row-left">
+                <div class="cart-product">
+                    <span class="cart-product-text crossed">Помідори</span>
+                    <span class="cart-product-amount crossed">2</span>
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+    <div class="badge">
+        <span class="buy-list">Buy list</span>
+        <span class="more-text">
+            <span class="created-by">Created by:</span>
+            <br>
+            <span class="name">Yakovenko Veronika</span>
+        </span>
+    </div>
+    <script src="script.js"></script>
+</body>
+
+</html>

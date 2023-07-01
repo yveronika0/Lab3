@@ -1,0 +1,393 @@
+body {
+    background-color: #d7d4d4fe;
+}
+
+.container {
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+}
+
+.white-box {
+    background-color: white;
+    border-radius: 5px;
+    box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.3);
+    margin: 15px;
+}
+
+.first-container {
+    flex: 0 0 60%;
+    height: auto;
+}
+
+.second-container {
+    flex: 0 0 36%;
+    height: auto;
+}
+
+@media (max-width: 500px) {
+    .container .first-container {
+        flex: 0 0 95%;
+    }
+
+    .container .second-container {
+        flex: 0 0 95%;
+    }
+
+    .container {
+        flex-wrap: wrap;
+    }
+}
+
+.row {
+    display: flex;
+    padding: 12px;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.row-left {
+    display: flex;
+    padding: 12px;
+    align-items: center;
+}
+
+.separator {
+    border: none;
+    height: 0;
+    width: 100%;
+    border-top: 1px solid #ccc;
+    margin: 2px 0;
+}
+.cart-product {
+    background-color: lightgrey;
+    display: flex;
+    align-items: center;
+    height: 35px;
+    border-radius: 5px;
+    padding: 5px;
+    margin-right: 8px;
+}
+
+.cart-product-text {
+    margin-right: 10px;
+}
+
+.cart-product-amount {
+    background-color: rgb(248, 176, 44);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 30px;
+    width: 30px;
+    font-weight: bold;
+    color: white;
+}
+
+.text-input-container {
+    padding: 10px;
+    margin-top: 15px;
+    margin-bottom: 15px;
+}
+
+.text-field {
+    position: relative;
+    width: 100%;
+    height: 44px;
+}
+
+.text-field input {
+    box-sizing: border-box;
+    width: 100%;
+    height: 100%;
+    padding-left: 25px;
+    padding-right: 120px;
+    font-size: 15px;
+    border: 1px solid #ccccccf2;
+    border-radius: 5px;
+}
+.add-button {
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 100px;
+    height: 100%;
+    background-color: #2285d0;
+    color: white;
+    font-size: 16px;
+    border: none;
+    border-radius: 0 5px 5px 0;
+    cursor: pointer;
+}
+
+.right {
+    overflow: hidden;
+}
+
+.right::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    height: 6px;
+    width: 100%;
+    background-color: rgba(0, 0, 0, 0.15);
+}
+.count{
+    background-color: #e8e8e8;
+    display: inline-block;
+    width: 40px;
+    height: 40px;
+    border-radius: 4px;
+    position: relative;
+}
+
+.row-column {
+    display: flex;
+    width: 33%;
+}
+
+.center-container {
+    justify-content: center;
+}
+
+.right-container {
+    justify-content: right;
+}
+
+.count-text {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: black;
+    font-weight: bold;
+    font-size: 20px;
+}
+
+.product {
+    font-family: "Arial", sans-serif;
+    font-size: 24px;
+}
+.crossed {
+    text-decoration: line-through;
+}
+
+.circle-button {
+    display: inline-block;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    position: relative;
+    cursor: pointer;
+    margin: 0 4px;
+}
+
+.minus {
+    background-color: red;
+}
+
+.plus {
+    background-color: green;
+}
+
+.notseen {
+    opacity: 0;
+}
+
+.faded {
+    opacity: .5;
+    cursor: not-allowed;
+}
+
+.button-text {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: white;
+    font-weight: bold;
+    font-size: 20px;
+}
+
+.purchase-button {
+    display: inline-block;
+    padding: 10px 20px;
+    border: 1px solid rgb(175, 173, 173);
+    border-radius: 4px;
+    background-color: #e6e2e2;
+    text-decoration: none;
+    text-align: center;
+    font-size: 16px;
+    cursor: pointer;
+    position: relative;
+}
+
+.square-button {
+    display: inline-block;
+    width: 40px;
+    height: 40px;
+    border-radius: 4px;
+    position: relative;
+    cursor: pointer;
+    margin: 0 4px;
+}
+.tooltip {
+    overflow: visible;
+    display: inline-block;
+}
+
+.tooltip::after {
+    content: attr(data-tooltip);
+    position: absolute;
+    bottom: 100%;
+    left: 50%;
+    transform: translateX(-50%);
+    width: max-content;
+    height: max-content;
+    background-color: rgb(164, 32, 164);
+    color: white;
+    border-radius: 5px;
+    padding: 5px;
+    margin-bottom: 4px;
+    opacity: 0;
+    transition: all 0.3s ease;
+    pointer-events: none;
+    white-space: nowrap;
+    transform: translateX(-50%) translateY(10px);
+}
+
+.tooltip:hover::after {
+    opacity: 1;
+    transform: translateX(-50%) translateY(0);
+}
+
+.badge {
+    position: fixed;
+    bottom: 0;
+    left: 40px;
+    padding: 10px;
+    background-color: #621853;
+    color: white;
+    border-radius: 5px 5px 0 0;
+    transition: all 0.3s;
+    overflow: visible;
+}
+
+.badge:hover {
+    background-color: #15155a;
+    color: white;
+    padding: 15px;
+}
+
+.badge .more-text {
+    display: none;
+    padding-top: 10px;
+    left: 0;
+    background-color: #15155a;
+    color: white;
+    max-height: 0;
+}
+
+.badge:hover .more-text {
+    display: block;
+    max-height: 100%;
+}
+
+.badge .buy-list {
+    font-size: 20px;
+    font-weight: bold;
+}
+
+.badge .name {
+    font-size: 14px;
+    font-weight: bold;
+}
+
+.badge .created-by {
+    font-size: 12px;
+}
+
+@media print {
+    .badge {
+        background-color: white;
+        color: black;
+        border: 2px solid black;
+    }
+
+    .badge .more-text {
+        display: block;
+        position: static;
+        padding: 10px;
+        background-color: white;
+        color: black;
+        border: none;
+        max-height: 100%;
+    }
+
+    .badge .buy-list {
+        display: none;
+    }
+
+    .badge .name {
+        font-size: 14px;
+    }
+
+    .badge .created-by {
+        font-size: 10px;
+    }
+}
+
+
+
+.row-buttons {
+    display: flex;
+    align-items: center;
+  }
+  
+  .faded-button {
+    opacity: 0.5;
+    cursor: not-allowed;
+  }
+  
+  .notseen {
+    display: none;
+  }
+  
+  .purchase-button {
+    display: flex;
+    align-items: center;
+    padding: 10px;
+    border: 1px solid rgb(175, 173, 173);
+    border-radius: 4px;
+    background-color: #e6e2e2;
+    text-decoration: none;
+    text-align: center;
+    font-size: 16px;
+    cursor: pointer;
+    position: relative;
+    margin-left: auto;
+  }
+  
+  .purchase-button:hover {
+    background-color: #d1cfcf;
+  }
+  
+  .purchase-button.right {
+    margin-left: 0;
+    margin-right: 10px;
+  }
+  
+  .purchase-button.right::before {
+    content: "";
+    flex-grow: 1;
+  }
+  
+  .purchase-button.right .button-text {
+    position: relative;
+    left: auto;
+    right: auto;
+    transform: none;
+  }
+
